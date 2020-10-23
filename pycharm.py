@@ -18,5 +18,3 @@ try:
 
 except:
     print(color.red+"Error from PyCharm."+color.white)
-
-PyCharm()
