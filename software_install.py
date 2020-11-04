@@ -31,7 +31,7 @@ def update():
 			print(color.red+"\nExiting...\n"+color.white)
 			exit()
 	except Exception as e:
-		print(color.red + e + color.white)
+		print(color.red + str(e) + color.white)
 
 class Installation:
 	def ide(self):
