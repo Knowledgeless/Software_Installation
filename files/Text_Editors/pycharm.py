@@ -10,6 +10,7 @@ try:
 
     try: 
         def PyCharm():
+            os.system('sudo apt update -y')
             os.system("sudo apt install snapd -y")
             os.system("sudo systemctl unmask snapd.service")
             os.system("systemctl enable snapd.service")
