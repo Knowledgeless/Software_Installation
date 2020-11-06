@@ -26,7 +26,7 @@ def update():
 		if user.lower()=="y":
 			print(color.green+"\n[+] Starting Upgrade...\n")
 			md.time.sleep(1)
-			os.system("sudo apt upgrade -y")
+			md.os.system("sudo apt upgrade -y")
 		else:
 			print(color.red+"\nExiting...\n"+color.white)
 			exit()
