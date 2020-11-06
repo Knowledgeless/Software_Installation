@@ -9,6 +9,7 @@ try:
         white = '\033[37m'
 
     def Atom():
+        os.system('sudo apt update -y')
         print(color.yellow+"\n[+] Collecting Data For Atom...\n"+color.white)
         os.system('wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -')
         os.system("""sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list' -y""")
