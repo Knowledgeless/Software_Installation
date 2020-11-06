@@ -11,11 +11,12 @@ try:
 
     try:
         def Code():
+            os.system("sudo apt update -y")
             print(color.yellow+"\n[+] Collecting Data For VS Code...\n"+color.white)
             time.sleep(2)
-            os.system("sudo apt install software-properties-common apt-transport-https wget -y")
-            os.system("wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -")
-            os.system('sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main -y"')
+            os.system("sudo apt install curl gpg software-properties-common apt-transport-https -y")
+            os.system("curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -")
+            os.system('echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list')
             os.system("sudo apt update -y")
             print(color.green+"\nInstalling VS Code...\n"+color.yellow)
             os.system("sudo apt install code -y")
